@@ -1,3 +1,5 @@
+use std::iter::FromIterator;
+
 pub fn series(digits: &str, len: usize) -> Vec<String> {
     if len == 0 {
         return vec!["".to_string(); digits.len() + 1];
@@ -8,6 +10,6 @@ pub fn series(digits: &str, len: usize) -> Vec<String> {
         .chars()
         .collect::<Vec<char>>()
         .windows(len)
-        .map(|x| x.iter().collect())
+        .map(String::from_iter)
         .collect()
 }
