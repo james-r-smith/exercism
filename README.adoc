@@ -1,5 +1,4 @@
 = My Exercism Solutions
-:toc:
 
 == Overview
 
